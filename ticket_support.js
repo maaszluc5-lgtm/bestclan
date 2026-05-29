@@ -13,7 +13,7 @@ const client = new Client({
   ]
 });
 
-const TICKET_KATEGORIE = '🎫 Tickets';
+const TICKET_KATEGORIE = '🎫-tickets';
 const LOG_KANAL = 'ticket-logs';
 const STAFF_ROLLE = '🛡️ Moderator';
 
