@@ -45,6 +45,9 @@ client.once('ready', async () => {
 client.on('interactionCreate', async (interaction) => {
 
   if (interaction.isChatInputCommand()) {
+    if (interaction.channel?.name !== 'befehle' && interaction.commandName !== 'support_setup') {
+      return interaction.reply({ content: '❌ Befehle nur im **#befehle** Kanal!', ephemeral: true });
+    }
 
     if (interaction.commandName === 'support_setup') {
       if (!interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
